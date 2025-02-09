@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css4</title>
+    <script src="https://kit.fontawesome.com/0314757302.js" crossorigin="anonymous"></script>
+    <style>
+        body{
+            background-color: #F7FDFC;
+            margin: 7%;
+            padding: 0%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .form{
+            background-color: #FFFFFF;
+            padding: 7%;
+            margin-top: 10%;
+            box-shadow: 0px 1px 5px 1px #a7a8aa;
+        }
+        img{
+            margin-left: -2%;
+        }
+        label{
+            font-weight: bold;
+        }
+        input, select, button{
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            display: inline-block;
+            border: 1px solid #e7e0e0;
+            box-sizing: border-box;
+        }
+        button{
+            background-color: rgb(64, 211, 191);
+            color: white;
+        }
+        span{
+            color: rgb(64, 211, 191);
+            text-align: justify;
+        }
+        .password{
+            position: relative;
+        }
+        .fa-eye{
+            float: right;
+            position: absolute;
+            top: 35px;
+            right: 3px;
+        }
+        .tolu{
+            border: 1px solid rgb(64, 211, 191);
+        }
+
+        @media screen and (min-width: 1024px){
+            body{
+                display: flex;
+                justify-content: space-between;
+                margin: 3%;
+                font-size: 1.2rem;
+            }
+            .other{
+               align-items: center;
+               padding-top: 10%;
+               padding-left: 10%;
+               width: 40%;
+            }
+            .other h1{
+                font-size: 2em;
+                font-weight: bold;
+            }
+            .other p{
+                font-size: 1.2rem;
+                width: 80%;
+                text-align: left;
+            }
+            .form{
+                margin-top: 0%;
+                padding: 3%;
+                width: 50%;
+            }
+            img{
+                width: 20%;
+            }
+            .inside{
+                visibility: visible;
+                text-align: center;
+            }
+            .outside{
+                visibility: hidden;
+                height: 0;
+                width: 0;
+            }
+            form{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            .activity, .password{
+                width: 100%;
+            }
+            
+            form div{
+            width: 40%;
+            margin-right: 5%;
+            }
+            .button{
+                width: 100%;
+            }
+            button, input, select{
+                padding: 20px;
+            }
+            input[placeholder], select{
+                font-size: 1.2rem;
+            }
+            button{
+                font-size: 1.2rem;
+            }
+            .fa-eye{
+                top: 50px;
+            }
+            
+    }
+        @media screen and (max-width: 1023px) {
+            .inside {
+                visibility: hidden;
+                height: 0;
+                width: 0;
+            }
+            .outside {
+                visibility: visible;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="other">
+        <section>
+        <img src="/assignments altschool/asset/Logo.png" alt="Logo">
+        </section>
+        <section>
+            <h1>For Individuals</h1>
+            <p class="outside">
+                Inspiring wholesome harmony for the mind, body and spirit, 
+                for everyone, everywhere.
+            </p>
+            <p class="inside">
+                Start benefiting from the wellness experience. For companies 
+                looking on increasing productivity, and improving organization 
+                wellness.
+            </p>
+        </section>
+    </div>
+    <div class="form">
+        <form action="#">
+            <div>
+                <label for="Firstname">Firstname</label><br>
+                <input type="text" placeholder="Tolu" class="tolu">
+            </div>
+            <div>
+                <label for="Lastname">Lastname</label><br>
+                <input type="text">
+            </div>
+            <div>
+                <label for="Gender">Gender</label><br>
+                <select name="Gender">
+                    <option value="select gender">Select here</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            <div>
+                <label for="DOB">Date of Birth</label><br>
+                <input type="date" placeholder="Select here">
+            </div>
+            <div>
+                <label for="weight">Weight (KG)</label><br>
+                <input type="text" placeholder="Enter weight">
+            </div>
+            <div>
+                <label for="Height">Height (CM)</label><br>
+                <input type="text" placeholder="Enter height here">
+            </div>
+            <div class="activity">
+                <label for="Activity">Activity Level</label><br>
+                <select name="Activity">
+                    <option value="select activity">Select here</option>
+                    <option value="Sedentary">Sedentary</option>
+                    <option value="Lightly Active">Lightly Active</option>
+                    <option value="Moderately Active">Moderately Active</option>
+                    <option value="Very Active">Very Active</option>
+                    <option value="Super Active">Super Active</option>
+              </select>
+            </div>
+            <div class="password">
+                <label for="Password">Password</label><br>
+                <input type="password"><i class="fa-solid fa-eye"></i>
+            </div>
+            <div class="button">
+                <button>Register</button>
+                <p class="inside">By clicking Register, you agree to our <span>Terms of Use</span> and our <span>Privacy Policy</span></p>
+            </div>
+        </form>
+    </div>
+    <p class="outside">By clicking Register, you agree to our <span>Terms of Use</span> and our <span>Privacy Policy</span></p>
+</body>
+</html>
